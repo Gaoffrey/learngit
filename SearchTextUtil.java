@@ -95,7 +95,7 @@ public class SearchTextUtil{
 	   try{
            if(ir!=null){
         	   //System.out.println("ir被调用");
-        	   articleContent =HtmlUtil.getTextFromHtml(ir.getIssueContent());
+        	   articleContent =ir.getIssueContent();
         	   while(iteratorList.hasNext()){
         		   String keyWordTemp =(String) iteratorList.next();
         		   if(articleContent!=null){
@@ -109,7 +109,7 @@ public class SearchTextUtil{
         	   }
            }else if(cr!=null){
         	   //System.out.println("第一次cr被调用");
-        	   articleContent =HtmlUtil.getTextFromHtml(cr.getCheckContent());
+        	   articleContent =cr.getCheckContent();
         	   while(iteratorList.hasNext()){
         		   String keyWordTemp =(String) iteratorList.next();
         		   if(articleContent!=null){
@@ -123,7 +123,7 @@ public class SearchTextUtil{
         	   }
            }else if(article!=null){
         	   //System.out.println("第一次article被调用");
-        	   articleContent =HtmlUtil.getTextFromHtml(article.getContent());
+        	   articleContent =article.getContent();
         	   while(iteratorList.hasNext()){
         		   String keyWordTemp =(String) iteratorList.next();
         		   if(articleContent!=null){
@@ -243,7 +243,7 @@ public class SearchTextUtil{
 	         	   
 	         	   String[] imgDesArray =ArticleUtil.getIssueImgDesArray(ir);
 	         	   
-	         	  wordsContent =HtmlUtil.getTextFromHtml(ir.getIssueContent());
+	         	  wordsContent =ir.getIssueContent();
 	         	   
 		 	       while(iteratorList.hasNext()){
 		 	    	    String keyWordTemp =(String) iteratorList.next();
@@ -276,7 +276,7 @@ public class SearchTextUtil{
 	         	   //System.out.println("cr被调用");
 	            	String[] imgDesArray =ArticleUtil.getCheckImgDesArray(cr);
 	            	
-	            	wordsContent =HtmlUtil.getTextFromHtml(cr.getCheckContent());
+	            	wordsContent =cr.getCheckContent();
 			 	   
 			 	       while(iteratorList.hasNext()){
 			 	    	    String keyWordTemp =(String) iteratorList.next();
@@ -307,7 +307,7 @@ public class SearchTextUtil{
 	         	   //System.out.println("article被调用");
 	            	String[] imgDesArray =ArticleUtil.getImgDesArray(article);
 	            	
-	            	wordsContent =HtmlUtil.getTextFromHtml(article.getContent());
+	            	wordsContent =article.getContent();
 		         	   
 			 	       while(iteratorList.hasNext()){
 			 	    	    String keyWordTemp =(String) iteratorList.next();
@@ -403,7 +403,7 @@ public class SearchTextUtil{
 		 	   try{
 		            if(ma!=null){
 		         	   //System.out.println("ma被调用");
-		         	   articleContent =HtmlUtil.getTextFromHtml(ma.getContent());
+		         	   articleContent =ma.getContent();
 		         	  while(iteratorList.hasNext()){
 		         		 String keyWordTemp =(String) iteratorList.next();
 		         		 if(articleContent!=null){
@@ -497,7 +497,7 @@ public class SearchTextUtil{
 		       
 		       if(ma!=null){
 	         	   //System.out.println("ma被调用");
-	         	   articleContent =HtmlUtil.getTextFromHtml(ma.getContent());
+	         	   articleContent =ma.getContent();
 	         	  while(iteratorListForWords.hasNext()){
 	         		 String keyWordTemp =(String) iteratorListForWords.next();
 	         		 if(articleContent!=null){
